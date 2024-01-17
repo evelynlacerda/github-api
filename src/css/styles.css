@@ -35,7 +35,7 @@ main {
 }
 
 .container {
-  width: 60%; /* se for uma tela menor que 980px vai se adaptar a 70% */
+  width: 70%; /* se for uma tela menor que 980px vai se adaptar a 70% */
   max-width: 960px; /* quando chegar em 980px para de aumentar */
   box-shadow: rgba(0, 0, 0, 0.3) 0px 25px 50px -12px;
   background-color: #fff;
@@ -89,7 +89,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px;
+  padding: 40px 0;
   gap: 40px;
 }
 
@@ -200,6 +200,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  padding: 0 8px;
 }
 
 .container .profile-data .events ul li {
@@ -243,6 +244,7 @@ main {
   }
 
   .container .profile-data .info img{
+    padding: 0 12px;
     margin-bottom: 20px;
   }
 
