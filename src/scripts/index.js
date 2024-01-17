@@ -1,5 +1,6 @@
 import { getUser } from "./services/user.js"
 import { getRepos } from "./services/repos.js"
+import { getEvents } from "./services/events.js"
 import { userData } from "./objects/user.js"
 import { screenResult } from "./objects/screen.js"
 
@@ -9,10 +10,12 @@ async function getProfileUser(username) {
     if (responseUser.message === 'Not Found') return screenResult.renderNotFound()
 
     const responseRepos = await getRepos(username)
+    const responseEvents = await getEvents(username)
 
     userData.setInfoUser(responseUser)
     userData.setReposUser(responseRepos)
-    
+    userData.setEventsUser(responseEvents)
+
     screenResult.renderUser(userData)
 }
 

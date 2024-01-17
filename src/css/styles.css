@@ -24,13 +24,13 @@ main {
   padding: 50px 0 0;      
 }
 
-.devicon-github-original{
+.devicon-github-original {
   font-size: 60px;
   margin-bottom: 30px;
   color: #FFFFFF;
 }
 
-.section{
+.section {
   padding: 70px 0;
 }
 
@@ -85,11 +85,12 @@ main {
   border-color: #ffffff;
 }
 
-.container .profile-data{
+.container .profile-data {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px;  
+  padding: 40px;
+  gap: 40px;
 }
 
 .container .profile-data .info {
@@ -98,24 +99,39 @@ main {
   align-items: center;
 }
 
-.container .profile-data .info .data{
+.container .profile-data .info .data {
   padding: 40px;
   width: 50%;
 }
 
-.container .profile-data .info img{
+.container .profile-data .info img {
   width: 50%;
   border-radius: 50%;
   border: 10px solid hotpink;
 }
 
-.container .profile-data .info h1{
-  font-size: 20px;
+.container .profile-data .info h1 {
+  font-size: 24px;
   margin-bottom: 20px;
   font-weight: 700;
 }
 
-.container .profile-data .info p{
+.container .profile-data .info .follow {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 16px;
+}
+
+.container .profile-data .info .follow p:first-child {
+  font-size: 18px;
+}
+
+.container .profile-data .info .follow span {
+  font-weight: 700;
+}
+
+.container .profile-data .info p {
   font-size: 15px;  
   font-weight: 400;
   line-height: 23px;
@@ -123,7 +139,7 @@ main {
 
 /* REPOSITORIES */
 
-.container .profile-data .repositories h2{
+.container .profile-data .repositories h2 {
   margin-bottom: 30px;
   text-align: center;
 }
@@ -134,23 +150,67 @@ main {
   justify-content: center;
 }
 
-.container .profile-data .repositories ul li a{
+.container .profile-data .repositories ul li {
   padding: 20px;
-  border: 1px solid grey;  
+  border: 1px solid lightgrey;
   margin: 20px;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   border-radius: 7px;
   transition: 0.3s ease-in-out;
 }
 
-.container .profile-data .repositories ul li a:hover{
-  background-color:hotpink;
-  color: #fff
+.container .profile-data .repositories ul li:hover {
+  background-color:#ffbcc5;
+  border: 1px solid #ffbcc5;
 }
 
-.container .profile-data.hide{
+.container .profile-data .repositories ul li .repos-info {
+  display: flex;
+  gap: 2px;
+  width: max-content;
+}
+
+.container .profile-data .repositories ul li .repos-info p {
+  color: white;
+  background-color: #24292e;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.container .profile-data.hide {
   display: none;
 }
+
+/* EVENTS */
+
+.container .profile-data .events {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container .profile-data .events h2 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.container .profile-data .events ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.container .profile-data .events ul li {
+  font-size: 16px;
+}
+
+.container .profile-data .events ul li span {
+  font-weight: bold;
+}
+
+/* MEDIA QUERY */
 
 @media (max-width: 1280px) {
   .container {
